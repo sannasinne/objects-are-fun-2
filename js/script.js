@@ -17,7 +17,10 @@ const learning = {
   weeklyHourGoal: 7,
   achievedStudyGoal: false,
   addStudyTime: function (hours) {
-    
+    this.hoursThisWeek += hours;
+    if (this.hoursThisWeek >= this.weeklyHourGoal) {
+      this.achievedStudyGoal = true;
+    }
   }
 };
 
