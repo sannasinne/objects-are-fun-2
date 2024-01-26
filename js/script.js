@@ -20,7 +20,13 @@ const learning = {
     this.hoursThisWeek += hours;
     if (this.hoursThisWeek >= this.weeklyHourGoal) {
       this.achievedStudyGoal = true;
+      this.celebrate();
     }
+  },
+  celebrate: function () {
+    body.classList.add("celebrate");
+    success.classList.remove("hide");
+    dance.classList.remove("hide");
   }
 };
 
